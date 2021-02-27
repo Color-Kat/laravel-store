@@ -24,8 +24,6 @@ class CheckIsAdmin
             return redirect()->route('index');
         }
 
-//        return redirect()->route('home');
-
         return $next($request);
     }
 }

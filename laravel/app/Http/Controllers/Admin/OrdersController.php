@@ -11,8 +11,6 @@ class OrdersController extends Controller
     public function index() {
         $orders = Order::where('status', 1)->get();
 
-        dump($orders);
-
         return view('auth.orders.index', compact('orders'));
     }
 }

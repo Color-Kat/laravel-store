@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BasketController extends Controller
 {
@@ -48,8 +49,13 @@ class BasketController extends Controller
             $pivotRow->update();
         }
 
+        if(Auth::check()) {
+            $order->user_id = Auth::id();
+            $order->save();
+        }
+
         $productName = Product::find($product_id)->name;
-        session()->flash('success', 'Вы доббавили в корзину '.$productName);
+        session()->flash('success', 'Вы добавили в корзину '.$productName);
 
         return redirect()->route('basket');
     }

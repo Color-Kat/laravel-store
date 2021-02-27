@@ -1,23 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe1012dc-749c-4b7a-bb99-b45d2cb611c2" name="Default Changelist" comment="" />
+    <list default="true" id="c4c7ec67-e642-4ef5-80d7-b0bd11a1d7b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/app/Http/Middleware/BasketIsNotEmpty.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/auth/categories/createForm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/auth/categories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/auth/categories/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/auth/products/createForm.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/auth/products/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/laravel/resources/views/auth/products/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-learn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-learn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/OrdersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Admin/OrdersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Middleware/CheckIsAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Middleware/CheckIsAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/database/migrations/2021_02_26_135515_alter_table_orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/database/migrations/2021_02_26_135515_alter_table_orders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/auth/layouts/masterProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/auth/layouts/masterProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/laravel/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
+        <option value="composer.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1ocQ8Useq4UmBogVSO5kGk9uJC2" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/laravel/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/laravel/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/laravel/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/laravel/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/laravel/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/laravel/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/laravel/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/laravel/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/laravel/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/laravel/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/laravel/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/laravel/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/laravel/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/laravel/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/laravel/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/laravel/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/laravel/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/laravel/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/laravel/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/laravel/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/laravel/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/laravel/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/laravel/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/laravel/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/laravel/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/laravel/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/laravel/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/laravel/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/laravel/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/laravel/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/laravel/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/laravel/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/laravel/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/laravel/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/laravel/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/laravel/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/laravel/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/laravel/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/laravel/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/laravel/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/laravel/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/laravel/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/laravel/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/laravel/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/laravel/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/laravel/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/laravel/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/laravel/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/laravel/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/laravel/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/laravel/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/laravel/vendor/composer" />
+      <path value="$PROJECT_DIR$/laravel/vendor/laravel/ui" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1ofHf0hiMvscaIbiAw3X2edxW0X" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,26 +176,144 @@
     <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/laravel/resources/views/auth" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-learn\laravel\resources\views\auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-learn\laravel\app\Http\Controllers\Admin" />
+      <recent name="W:\domains\laravel-learn\laravel\database\migrations" />
+      <recent name="W:\domains\laravel-learn\laravel\resources\views\auth\layouts" />
+      <recent name="W:\domains\laravel-learn\laravel\resources\views\layouts" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fe1012dc-749c-4b7a-bb99-b45d2cb611c2" name="Default Changelist" comment="" />
-      <created>1613583239643</created>
+      <changelist id="c4c7ec67-e642-4ef5-80d7-b0bd11a1d7b8" name="Default Changelist" comment="" />
+      <created>1613670826364</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1613583239643</updated>
-      <workItem from="1613583240727" duration="988000" />
+      <updated>1613670826364</updated>
+      <workItem from="1613670828236" duration="25000" />
+      <workItem from="1613736215420" duration="3799000" />
+      <workItem from="1613754057130" duration="2246000" />
+      <workItem from="1613824713242" duration="2089000" />
+      <workItem from="1613841178457" duration="2871000" />
+      <workItem from="1613907000401" duration="2478000" />
+      <workItem from="1613926936792" duration="5961000" />
+      <workItem from="1613998845260" duration="2840000" />
+      <workItem from="1614013290499" duration="2856000" />
+      <workItem from="1614084644854" duration="2414000" />
+      <workItem from="1614099638139" duration="2922000" />
+      <workItem from="1614170840736" duration="2006000" />
+      <workItem from="1614186163707" duration="3972000" />
+      <workItem from="1614256566562" duration="762000" />
+      <workItem from="1614272550747" duration="2916000" />
+      <workItem from="1614346035902" duration="4657000" />
+      <workItem from="1614358863871" duration="4052000" />
+      <workItem from="1614422682136" duration="2093000" />
+      <workItem from="1614445374913" duration="3447000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="221" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613736536312">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="552" y="221" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613736536312" />
+    <state x="692" y="284" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614257185906">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="692" y="284" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614257185906" />
+    <state x="690" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614172165028">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="690" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614172165028" />
+    <state x="740" y="317" key="FileChooserDialogImpl" timestamp="1613825085369">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="740" y="317" key="FileChooserDialogImpl/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613825085369" />
+    <state width="1293" height="280" key="GridCell.Tab.0.bottom" timestamp="1613929149200">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state width="1293" height="280" key="GridCell.Tab.0.bottom/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613929149200" />
+    <state width="1293" height="280" key="GridCell.Tab.0.center" timestamp="1613929149200">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state width="1293" height="280" key="GridCell.Tab.0.center/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613929149200" />
+    <state width="1293" height="280" key="GridCell.Tab.0.left" timestamp="1613929149200">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state width="1293" height="280" key="GridCell.Tab.0.left/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613929149200" />
+    <state width="1293" height="280" key="GridCell.Tab.0.right" timestamp="1613929149200">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state width="1293" height="280" key="GridCell.Tab.0.right/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613929149200" />
+    <state x="794" y="486" key="NewPhpFileDialog" timestamp="1613739481052">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="794" y="486" key="NewPhpFileDialog/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1613739481052" />
+    <state x="461" y="207" width="1116" height="711" key="SettingsEditor" timestamp="1614362295777">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="461" y="207" width="1116" height="711" key="SettingsEditor/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614362295777" />
+    <state x="667" y="296" width="585" height="534" key="find.popup" timestamp="1614446522816">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="667" y="296" width="585" height="534" key="find.popup/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614446522816" />
+    <state x="616" y="262" width="672" height="677" key="run.anything.popup" timestamp="1614447981609">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="616" y="262" width="672" height="677" key="run.anything.popup/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614447981609" />
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup" timestamp="1614447962216">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="623" y="269" width="672" height="678" key="search.everywhere.popup/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614447962216" />
+    <state x="682" y="474" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1614085824423">
+      <screen x="0" y="46" width="1920" height="1034" />
+    </state>
+    <state x="682" y="474" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.46.1920.1034/1920.473.1280.984@0.46.1920.1034" timestamp="1614085824423" />
   </component>
 </project>

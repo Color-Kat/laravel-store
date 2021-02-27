@@ -30,32 +30,33 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-expand-md navbar-light navbar-laravel">
+    <nav class="navbar navbar-default navbar-expand-md navbar-light navbar-laravel bg-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('index') }}">
                 Вернуться на сайт
             </a>
 
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                    <li><a
-                            href="http://laravel-diplom-1.rdavydov.ru/admin/categories">Категории</a></li>
-                    <li><a href="http://laravel-diplom-1.rdavydov.ru/admin/products">Товары</a>
-                    <li><a href="http://laravel-diplom-1.rdavydov.ru/admin/products">Товары</a>
+            <div id="navbar" class="navbar collapse navbar-collapse">
+                <ul class="nav navbar-nav mr-auto" >
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('categories.index')}}">Категории</a>
                     </li>
-                    <li><a href="http://laravel-diplom-1.rdavydov.ru/admin/orders">Заказы</a></li>
-                    <li><a href="http://laravel-diplom-1.rdavydov.ru/admin/orders">Заказы</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('products.index')}}">Товары</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('home')}}">Заказы</a>
+                    </li>
                 </ul>
 
-{{--                <ul class="nav navbar-nav navbar-right">--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link" href="{{ route('login') }}">Войти</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link" href="{{ route('register') }}">Зарегистрироваться</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
+                {{--                <ul class="nav navbar-nav navbar-right">--}}
+                {{--                    <li class="nav-item">--}}
+                {{--                        <a class="nav-link" href="{{ route('login') }}">Войти</a>--}}
+                {{--                    </li>--}}
+                {{--                    <li class="nav-item">--}}
+                {{--                        <a class="nav-link" href="{{ route('register') }}">Зарегистрироваться</a>--}}
+                {{--                    </li>--}}
+                {{--                </ul>--}}
                 @guest
                     <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item">

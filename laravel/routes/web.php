@@ -20,11 +20,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MainController@home')->name('index');
 
-Route::get('/basket', 'BasketController@basket')->name('basket');
-Route::get('/basket/place', 'BasketController@order')->name('order');
-Route::post('/basket/add/{id}', 'BasketController@basketAdd')->name('basketAdd');
-Route::post('/basket/sub/{id}', 'BasketController@basketSub')->name('basketSub');
-Route::post('/basket/place', 'BasketController@orderConfirm')->name('order-confirm');
+// ------- BASKET ------ //
+Route::group([
+    'prefix' => 'basket'
+], function () {
+
+    Route::group([
+        'middleware' => ['basket_is_not_empty'],
+    ], function () {
+        Route::get('/', 'BasketController@basket')->name('basket');
+        Route::get('/place', 'BasketController@order')->name('order');
+        Route::post('/place', 'BasketController@orderConfirm')->name('order-confirm');
+    });
+
+    Route::post('/add/{id}', 'BasketController@basketAdd')->name('basketAdd');
+    Route::post('/sub/{id}', 'BasketController@basketSub')->name('basketSub');
+});
+
+// ------- END BASKET ------ //
 
 Route::get('/categories', 'MainController@categories')->name('categories');
 Route::get('/categories/{category}', 'MainController@category')->name('category');
@@ -41,14 +54,17 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
 Route::group([
     'middleware' => ['auth'],
-    'namespace' => 'Admin'
+    'namespace'  => 'Admin',
+    'prefix' => 'admin'
 ],
     function () {
         Route::group([
             'middleware' => ['is_admin']
-        ], function() {
-            Route::get('/orders/index', 'OrdersController@index')->name('home');
+        ], function () {
+            Route::get('/orders', 'OrdersController@index')->name('home');
         });
 
+        Route::resource('/categories', 'CategoryController');
+        Route::resource('/products', 'ProductController');
     });
 
