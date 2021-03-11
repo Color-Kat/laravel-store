@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="col-md-12">
-        <h1>Категория Бытовая техничка</h1>
+        <h1>{{$product->name}}</h1>
         <table class="table">
             <tbody>
             <tr>
@@ -40,13 +40,27 @@
             <tr>
                 <td>Картинка</td>
                 <td><img
-                        src="{{$product->image}}"
+                        src="{{Storage::url($product->image)}}"
                         height="240px"
                     ></td>
             </tr>
             <tr>
                 <td>Цена</td>
                 <td>{{$product->price}}</td>
+            </tr>
+            <tr>
+                <td>Лейблы</td>
+                <td><div class="labels">
+                        @if($product->isNew())
+                            <span class="badge badge-warning">Новинка!</span>
+                        @endIf
+                        @if($product->isRecommend())
+                            <span class="badge badge-success">Рекомендуем!</span>
+                        @endIf
+                        @if($product->isHit())
+                            <span class="badge badge-danger">Хит</span>
+                        @endIf
+                    </div></td>
             </tr>
             </tbody>
         </table>

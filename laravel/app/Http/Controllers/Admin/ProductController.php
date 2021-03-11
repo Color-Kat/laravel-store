@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Category;
+use App\models\Category;
 use App\Http\Controllers\Controller;
-use App\Product;
+use App\Http\Requests\ProductRequest;
+use App\models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -16,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::get();
+        $products = Product::with('category')->paginate(9);
         return view('auth.products.index', compact('products'));
     }
 
@@ -37,9 +39,14 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        Product::create($request->all());
+        $path = $request->file('image')->store('products');
+
+        $params = $request->all();
+        $params['image'] = $path;
+
+        Product::create($params);
 
         return redirect()->route('products.index');
     }
@@ -74,9 +81,23 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(ProductRequest $request, Product $product)
     {
-        $product->update($request->all());
+        $params = $request->all();
+        unset($params['image']);
+
+        if($request->has('image')) {
+            Storage::delete($product->image);
+            $params['image'] = $request->file('image')->store('products');
+        }
+
+        foreach (['hit', 'new', 'recommend'] as $fieldName) {
+            if (!isset($params[$fieldName])) {
+                $params[$fieldName] = 0;
+            }
+        }
+
+        $product->update($params);
 
         return redirect()->route('products.index');
     }

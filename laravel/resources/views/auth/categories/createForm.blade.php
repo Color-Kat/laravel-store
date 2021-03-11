@@ -27,23 +27,22 @@
             <br>
             @csrf
 
-                @isset($category)
-                    @method('PUT')
-                @endisset
+            @isset($category)
+                @method('PUT')
+            @endisset
 
             <div>
                 <div class="input-group row">
                     <label for="code" class="col-sm-2 col-form-label">Код: </label>
                     <div class="col-sm-6">
+                        @include('auth.layouts.error', ['fieldName' => 'code'])
                         <input
                             type="text"
                             class="form-control"
                             name="code"
                             id="code"
 
-                            @isset($category)
-                            value="{{$category->code}}"
-                            @endisset
+                            value="{{old('code', isset($category) ? $category->code : null)}}"
                         >
                     </div>
                 </div>
@@ -51,14 +50,16 @@
                 <div class="input-group row">
                     <label for="name" class="col-sm-2 col-form-label">Название: </label>
                     <div class="col-sm-6">
+                        @include('auth.layouts.error', ['fieldName' => 'name'])
                         <input
                             type="text"
                             class="form-control"
                             name="name"
                             id="name"
-                            @isset($category)
-                            value="{{$category->name}}"
-                            @endisset
+                            value="{{old('name', isset($category) ? $category->name : null)}}"
+                            {{--                            @isset($category)--}}
+{{--                            value="{{$category->name}}"--}}
+{{--                            @endisset--}}
                         >
                     </div>
                 </div>
@@ -66,6 +67,7 @@
                 <div class="input-group row">
                     <label for="description" class="col-sm-2 col-form-label">Описание: </label>
                     <div class="col-sm-6">
+                        @include('auth.layouts.error', ['fieldName' => 'description'])
 							<textarea
                                 name="description"
                                 id="description"

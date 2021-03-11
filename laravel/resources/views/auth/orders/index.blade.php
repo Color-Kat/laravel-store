@@ -36,12 +36,13 @@
                     <td>{{$order->calculate()}} Руб</td>
                     <td>
                         <div class="btn-group" role="group">
-                            <a class="btn btn-success" type="button"
-                                {{--                               @admin--}}
-                                {{--                               href="{{ route('orders.show', $order) }}"--}}
-                                {{--                               @else--}}
-                                {{--                               href="{{ route('person.orders.show', $order) }}"--}}
-                                {{--                               @endadmin--}}
+                            <a
+                                class="btn btn-success" type="button"
+                                @admin
+                                    href="{{ route('order.show', $order) }}"
+                                @else
+                                    href="{{ route('person.order.show', $order) }}"
+                                @endadmin
                             >Открыть</a>
                         </div>
                     </td>

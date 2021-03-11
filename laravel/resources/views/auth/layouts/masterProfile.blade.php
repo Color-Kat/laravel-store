@@ -14,8 +14,9 @@
     <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
-    <script src="http://laravel-diplom-1.rdavydov.ru/js/app.js" defer></script>
+        crossorigin="anonymous"
+    ></script>
+    {{--    <script src="http://laravel-diplom-1.rdavydov.ru/js/app.js" defer></script>--}}
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Fonts -->
@@ -24,8 +25,7 @@
 
     <!-- Styles -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    {{--    <link href="/css/app.css" rel="stylesheet">--}}
     <link href="/css/admin.css" rel="stylesheet">
 </head>
 <body>
@@ -37,16 +37,22 @@
             </a>
 
             <div id="navbar" class="navbar collapse navbar-collapse">
-                <ul class="nav navbar-nav mr-auto" >
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('categories.index')}}">Категории</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('products.index')}}">Товары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('home')}}">Заказы</a>
-                    </li>
+                <ul class="nav navbar-nav mr-auto">
+                    @admin
+                        <li @routeactive('categories.index') class="nav-item">
+                            <a class="nav-link" href="{{route('categories.index')}}">Категории</a>
+                        </li>
+                        <li @routeactive('products.index') class="nav-item">
+                            <a class="nav-link" href="{{route('products.index')}}">Товары</a>
+                        </li>
+                        <li @routeactive('home') class="nav-item">
+                            <a class="nav-link" href="{{route('home')}}">Заказы</a>
+                        </li>
+                    @else
+                        <li @routeactive('home') class="nav-item">
+                            <a class="nav-link" href="{{route('person.orders.index')}}">Заказы</a>
+                        </li>
+                    @endadmin
                 </ul>
 
                 {{--                <ul class="nav navbar-nav navbar-right">--}}
@@ -72,21 +78,31 @@
                     <ul class="nav navbar-nav navbar-right">
 
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                               data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false" v-pre>
-                                Администратор
+                            <a
+                                id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" v-pre
+                            >
+                                @admin
+                                    Администратор
+                                @else
+                                    {{Auth::user()->name}}
+                                @endadmin
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                <a
+                                    class="dropdown-item"
+                                    onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"
+                                >
                                     Выйти
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout')}}" method="POST"
-                                      style="display: none;">
+                                <form
+                                    id="logout-form" action="{{ route('logout')}}" method="POST"
+                                    style="display: none;"
+                                >
                                     @csrf
                                 </form>
                             </div>

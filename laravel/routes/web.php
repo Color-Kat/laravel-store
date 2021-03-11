@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'MainController@home')->name('index');
+Route::get('/', 'MainController@index')->name('index');
 
 // ------- BASKET ------ //
 Route::group([
@@ -33,8 +33,8 @@ Route::group([
         Route::post('/place', 'BasketController@orderConfirm')->name('order-confirm');
     });
 
-    Route::post('/add/{id}', 'BasketController@basketAdd')->name('basketAdd');
-    Route::post('/sub/{id}', 'BasketController@basketSub')->name('basketSub');
+    Route::post('/add/{product}', 'BasketController@basketAdd')->name('basketAdd');
+    Route::post('/sub/{product}', 'BasketController@basketSub')->name('basketSub');
 });
 
 // ------- END BASKET ------ //
@@ -52,19 +52,35 @@ Auth::routes([
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
-Route::group([
-    'middleware' => ['auth'],
-    'namespace'  => 'Admin',
-    'prefix' => 'admin'
-],
-    function () {
-        Route::group([
-            'middleware' => ['is_admin']
-        ], function () {
-            Route::get('/orders', 'OrdersController@index')->name('home');
-        });
+Route::middleware(['auth'])->group(function () {
 
-        Route::resource('/categories', 'CategoryController');
-        Route::resource('/products', 'ProductController');
+    Route::group([
+        'prefix'    => 'person',
+        'namespace' => 'Person',
+        'as'        => 'person.'
+    ], function () {
+        Route::get('/orders', 'OrdersController@index')->name('orders.index');
+        Route::get('/orders/{order}', 'OrdersController@show')->name('order.show');
     });
+
+    Route::group([
+        'namespace' => 'Admin',
+        'prefix'    => 'admin'
+    ],
+        function () {
+            Route::group([
+                'middleware' => ['is_admin']
+            ], function () {
+                Route::get('/orders', 'OrdersController@index')->name('home');
+                Route::get('/orders/{order}', 'OrdersController@show')->name('order.show');
+            });
+
+            Route::resource('/categories', 'CategoryController');
+            Route::resource('/products', 'ProductController');
+        });
+});
+
+Route::get('/reset', 'ResetController@reset')->name('reset');
+
+
 

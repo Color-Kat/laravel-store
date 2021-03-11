@@ -20,14 +20,14 @@
 
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+            <li @routeactive('index') class="nav-item">
                 <a class="nav-link" href="{{route('index')}}"> Главная
-                </a>
+            </a>
             </li>
-            <li class="nav-item">
+            <li @routeactive('categor*')  class="nav-item">
                 <a class="nav-link" href="{{route('categories')}}"> Категории </a>
             </li>
-            <li class="nav-item">
+            <li @routeactive('basket*') class="nav-item">
                 <a class="nav-link" href="{{route('basket')}}"> Корзина </a>
             </li>
 
@@ -50,6 +50,10 @@
                 </li>
             @endguest
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('reset')}}">Сброс</a>
+            </li>
+
             @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('get-logout')}}">Выйти</a>
@@ -60,9 +64,17 @@
                 {{--                    @csrf--}}
                 {{--                </form>--}}
                 {{--            </li>--}}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('home')}}"> Админ панель </a>
-                </li>
+
+                @admin
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('home')}}"> Админ панель </a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('person.orders.index')}}"> Заказы </a>
+                    </li>
+                @endadmin
+
             @endauth
         </ul>
 

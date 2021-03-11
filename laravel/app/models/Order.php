@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,11 +12,25 @@ class Order extends Model
 
     public function calculate() {
         $sum = 0;
-        foreach ($this->products as $product) {
+        foreach ($this->products()->withTrashed()->get() as $product) {
             $sum += $product->price * $product->pivot->count;
         }
 
         return $sum;
+    }
+
+    public static function getFullSum() {
+        return session('full_order_price', 0);
+    }
+
+    public static function changeSum($price) {
+        $sum = session('full_order_price') + $price;
+
+        session(['full_order_price' => $sum]);
+    }
+
+    public static function eraseOrderSum() {
+        session()->forget('full_order_price');
     }
 
     public function saveOrder($name, $surname, $phone) {
@@ -29,5 +43,9 @@ class Order extends Model
 
            return true;
        } else return false;
+    }
+
+    public function scopeActive($query) {
+        return $query->where('status', 1);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Order;
+use App\models\Order;
 use Closure;
 
 class BasketIsNotEmpty
@@ -17,15 +17,13 @@ class BasketIsNotEmpty
     public function handle($request, Closure $next)
     {
         $orderId = session('orderId');
-        if (!is_null($orderId)) {
-            $order = Order::findOrFail($orderId);
-
-            // redirect if basket is empty
-            if($order->products->count() == 0) {
-                session()->flash('warning', 'ваша корзина пуста');
-                return redirect()->route('index');
-            }
+        $order_sum = session('orderId');
+        if (!is_null($orderId) && Order::getFullSum() > 0) {
+            return $next($request);
         }
-        return $next($request);
+
+        session()->flash('warning', 'ваша корзина пуста');
+        return redirect()->route('index');
+
     }
 }
